@@ -1,0 +1,14 @@
+#logo{
+    }
+    body{
+        background-color:rgb(227, 233, 233);
+    }
+    #total-jobs{
+        background-color: rgb(21, 206, 150);
+    }
+    #jobs-completed{
+        background-color: rgb(84, 179, 179);
+    }
+    #jobs-pending{
+        background-color: rgb(128, 214, 29);
+    }

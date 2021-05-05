@@ -1,0 +1,82 @@
+{% extends 'accounts/main.html' %} 
+
+{% block content %}
+{% include 'accounts/status.html' %} 
+
+<br>
+
+<div class="row">
+	<div class="col-md-5">
+		<h5>Estudiante:</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-secondary  btn-sm btn-block" href="">Crear Estudiante</a>
+			<table class="table table-sm">
+				<tr>
+					
+					<th>Estudiante</th>
+					<th>Carrera</th>
+					
+				</tr>
+					{% for i in estudiante %}
+							<tr>
+								<td>{{i.name}}</td>
+								<td>{{i.carrer}}</td>
+							</tr>
+						{% endfor %}
+			</table>
+		</div>
+	</div>
+
+    <div class="col-md-5">
+		<h5>Empresa:</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-secondary  btn-sm btn-block" href="">Crear Empresa</a>
+			<table class="table table-sm">
+				<tr>
+					<th>Empresa</th>
+					<th>Rubro</th>
+				</tr>
+				{% for i in empresa %}
+					<tr>
+						<td>{{i.name_company}}</td>
+						<td>{{i.heading}}</td>
+					</tr>
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+
+	<div class="col-md-7">
+        <p> </p>
+		<h5>Ultimas 5 practicas</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href="">Crear Practica</a>
+			<table class="table table-sm">
+				<tr>
+					<th>Trabajo</th>
+					<th>Fecha emision</th>
+					<th>Estado</th>
+					<th>Actualizacion</th>
+					<th>Eliminar</th>
+				</tr>
+				{% for i in ultimas5 %}
+					<tr>
+						<td>{{i.trabajo.name_Job}}</td>
+						<td>{{i.trabajo.date_created}}</td>
+						<td>{{i.status}}</td>
+						<td><a href=""class="btn btn-primary btn-sm">Actualizar</a></td>
+						<td><a href=""class="btn btn-danger btn-sm">Eliminar</a></td>
+					</tr>
+					
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
